@@ -1,7 +1,7 @@
 ###############################################
 # Stage 1: Builder
 ###############################################
-FROM quay.io/hummingbird/python:3.14-builder AS builder
+FROM quay.io/hummingbird/python:3.15-builder AS builder
 
 USER 0
 
@@ -32,7 +32,7 @@ COPY mealie_local_ai ./mealie_local_ai
 ###############################################
 # Stage 2: Runtime
 ###############################################
-FROM quay.io/hummingbird/python:3.14
+FROM quay.io/hummingbird/python:3.15
 
 ENV PYTHONUNBUFFERED=1 \
     PYTHONDONTWRITEBYTECODE=1
